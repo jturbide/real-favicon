@@ -60,14 +60,21 @@ This project is intentionally small and opinionated. It solves one problem and s
 
 ## Installation
 
+NPM
 ```bash
-npm install real-favicon
+npm install --save-dev real-favicon
+```
+
+Yarn
+```bash
+yarn add -D real-favicon
 ```
 
 Requirements:
 
 * Node.js **18+**
 * A build step (CI, scripts, or bundler)
+* A brain
 
 ---
 
@@ -145,10 +152,21 @@ await generateFaviconsNode({
 
 Typical usage:
 
+As a node script:
 ```json
 {
   "scripts": {
     "prebuild": "node scripts/generate-favicon.js",
+    "build": "vite build"
+  }
+}
+```
+
+As a ts script:
+```json
+{
+  "scripts": {
+    "prebuild": "tsx scripts/generate-favicon.ts",
     "build": "vite build"
   }
 }
@@ -165,7 +183,7 @@ Characteristics:
 
 ## Optional: Vite adapter
 
-If you prefer bundler-managed orchestration, you can use the Vite adapter, or even make your own.
+If you prefer bundler-managed orchestration (your choice), you can use the Vite adapter, or even make your own.
 
 ```ts
 import { defineConfig } from 'vite'
@@ -244,7 +262,7 @@ Hooks are synchronous, optional, and best-effort.
 
 ### SvelteKit
 
-In your `hooks.server.ts`
+In your file `src/hooks.server.ts`
 
 ```ts
 import favicons from '$lib/generated/favicons.html?raw'
