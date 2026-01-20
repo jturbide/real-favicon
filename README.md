@@ -62,12 +62,12 @@ This project is intentionally small and opinionated. It solves one problem and s
 
 NPM
 ```bash
-npm install --save-dev real-favicon
+npm install --save-dev @jturbide/real-favicon
 ```
 
 Yarn
 ```bash
-yarn add -D real-favicon
+yarn add -D @jturbide/real-favicon
 ```
 
 Requirements:

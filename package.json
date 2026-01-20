@@ -1,5 +1,5 @@
 {
-  "name": "real-favicon",
+  "name": "@jturbide/real-favicon",
   "version": "0.1.0",
   "description": "Build-time favicon generation with a framework-agnostic core and optional Vite plugin.",
   "type": "module",
