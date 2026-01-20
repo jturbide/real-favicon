@@ -275,6 +275,24 @@ export const handle = ({ event, resolve }) => {
 }
 ```
 
+Also add `%favicons.head%` in your app.html or index.html inside the <head> tag:
+
+Example:
+```html
+<!doctype html>
+<html lang="%paraglide.lang%">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %favicons.head%
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover" data-sveltekit-preload-code="eager">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>
+```
+
 ### Astro
 
 ```astro
